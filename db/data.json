@@ -1,0 +1,212 @@
+{
+  "songs": [
+    {
+      "title": "Here We Go",
+      "singer": "kyOresu",
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/zHCz9k7SnIM"
+    },
+    {
+      "title": "Let Me Dance",
+      "singer": "Miori Celesta",
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/zDMYvYDypLU"
+    },
+    {
+      "title": "Lovesick Loop",
+      "singer": "Kiyon",
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/zWPVPtjD-KI"
+    },
+    {
+      "title": "Can I Get To Know U",
+      "singer": "Yuuna Nini",
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/u7aDqmUdP44"
+    },
+    {
+      "title": "Repeat",
+      "singer": "Rachie",
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/wFHEAE0WwPA"
+    },
+    {
+      "title": "Flourish",
+      "singer": "Kitsui Akira",
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/xFT-nczj-d4"
+    },
+    {
+      "title": "Souvenir",
+      "singer": "girl_dm_",
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/33vugHcFUsI"
+    },
+    {
+      "title": "Digital Love",
+      "singer": [
+        "Miori Celesta",
+        "Yoclesh",
+        "Yuuna Nini",
+        "Shabel Tonya",
+        "Crydiaa"
+      ],
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/tdGV0xqFovQ"
+    },
+    {
+      "title": "Seasons",
+      "singer": "Shiki Miyoshino",
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/IsraVV__oG8"
+    },
+    {
+      "title": "Harbor",
+      "singer": "Kaneko Lumi",
+      "album": "Virtual Paradise",
+      "link": "https://youtu.be/lf2wTZZ3WRM"
+    },
+    {
+      "title": "Embrace",
+      "singer": "Kiyon",
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/qKOdgmqWCzk"
+    },
+    {
+      "title": "Angel In Disguise",
+      "singer": "Kitsui Akira",
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/gUgxw7PzOBg"
+    },
+    {
+      "title": "Rose",
+      "singer": "Ember Amane",
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/tXXRM5kqpwo"
+    },
+    {
+      "title": "Heart Of Glass",
+      "singer": "Rachie",
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/l2K_U9OVlCo"
+    },
+    {
+      "title": "Through The Night",
+      "singer": "Yuuka Bear",
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/Z1DVXMaAwtE"
+    },
+    {
+      "title": "Cinnamon",
+      "singer": ["Miori Celesta", "Yuuna Nini"],
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/OzQHGmVI1kQ"
+    },
+    {
+      "title": "Magazines",
+      "singer": "Nia Suzune",
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/NMaZVtiY83A"
+    },
+    {
+      "title": "Hopeless Romantic",
+      "singer": "JubyPhonic",
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/fLVKWWjZTRk"
+    },
+    {
+      "title": "One Step At A Time",
+      "singer": "Miori Celesta",
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/pr57pGuRrao"
+    },
+    {
+      "title": "Love Me Not",
+      "singer": "TOFIE",
+      "album": "SUMMERTIDE",
+      "link": "https://youtu.be/gWVgeuM5qhU"
+    }
+  ],
+  "singers": [
+    {
+      "name": "kyOresu",
+      "link": "https://x.com/KyOresu"
+    },
+    {
+      "name": "Miori Celesta",
+      "link": "https://twitter.com/mioricelesta"
+    },
+    {
+      "name": "Kiyon",
+      "link": "https://x.com/KiyonVT"
+    },
+    {
+      "name": "Yuuna Nini",
+      "link": "https://x.com/niniyuuna"
+    },
+    {
+      "name": "Rachie",
+      "link": "https://x.com/splendiferachie"
+    },
+    {
+      "name": "Kitsui Akira",
+      "link": "https://x.com/KitsuiAkira"
+    },
+    {
+      "name": "girl_dm_",
+      "link": "https://x.com/girl_dm_"
+    },
+    {
+      "name": "Yoclesh",
+      "link": "https://x.com/yoclesh"
+    },
+    {
+      "name": "Shabel Tonya",
+      "link": "https://x.com/ShabelTonya"
+    },
+    {
+      "name": "Crydiaa",
+      "link": "https://x.com/Crydiaa"
+    },
+    {
+      "name": "Shiki Miyoshino",
+      "link": "https://x.com/ShikiMiyoshino"
+    },
+    {
+      "name": "Kaneko Lumi",
+      "link": "https://x.com/Kaneko_Lumi"
+    },
+    {
+      "name": "Ember Amane",
+      "link": "https://x.com/EmberAmane"
+    },
+    {
+      "name": "Yuuka Bear",
+      "link": "https://x.com/YuukaBear1"
+    },
+    {
+      "name": "Nia Suzune",
+      "link": "https://x.com/NiaSuzune"
+    },
+    {
+      "name": "JubyPhonic",
+      "link": "https://x.com/JubyPhonic_P"
+    },
+    {
+      "name": "TOFIE",
+      "link": "https://x.com/tofiemusic"
+    }
+  ],
+  "albums": [
+    {
+      "title": "Virtual Paradise",
+      "release_year": "2023",
+      "link": "https://youtu.be/Faxp1cwhP-4"
+    },
+    {
+      "title": "SUMMERTIDE",
+      "release_year": "2024",
+      "link": "https://youtu.be/jiiI6mygFTo"
+    }
+  ]
+}
