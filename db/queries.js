@@ -44,8 +44,60 @@ const getAllSingers = async function () {
   return rows;
 };
 const getAllAlbums = async function () {
-  const { rows } = await pool.query("SELECt * FROM albums;");
+  const { rows } = await pool.query("SELECT * FROM albums;");
   return rows;
 };
+const updateSong = async function (songInfo) {
+  await pool.query(
+    `
+    UPDATE songs
+    SET title = $1,
+    singer_id = $2,
+    album_id = $3,
+    link = $4
+    WHERE id = $5;
+    `,
+    [
+      songInfo.title,
+      songInfo.singer_id,
+      songInfo.album_id,
+      songInfo.link,
+      songInfo.id,
+    ]
+  );
+};
+const updateSinger = async function (singerInfo) {
+  await pool.query(
+    `
+    UPDATE singers
+    SET name = $1,
+    link = $2
+    WHERE id = $3
+    ;
+    `,
+    [singerInfo.name, singerInfo.link, singerInfo.id]
+  );
+};
+const updateAlbum = async function (albumInfo) {
+  await pool.query(
+    `
+      UPDATE albums
+      SET title = $1,
+      release_year = $2,
+      link = $3
+      WHERE id = $4
+      ;
+      `,
+    [albumInfo.title, albumInfo.releaseYear, albumInfo.link, albumInfo.id]
+  );
+};
 
-module.exports = { getSong, getAllSongs, getAllSingers, getAllAlbums };
+module.exports = {
+  getSong,
+  getAllSongs,
+  getAllSingers,
+  getAllAlbums,
+  updateSong,
+  updateSinger,
+  updateAlbum,
+};
