@@ -24,7 +24,7 @@ const CREATE_TABLES_SQL = [
   CREATE TABLE IF NOT EXISTS albums (
       id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
       title VARCHAR ( 255 ),
-      release_year VARCHAR ( 255 ),
+      release_year INTEGER,
       link VARCHAR ( 255 )
   );
   `,
