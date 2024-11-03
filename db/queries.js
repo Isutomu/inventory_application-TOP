@@ -1,16 +1,21 @@
 const pool = require("./pool");
 
 const SQL_SEARCH_SONG = `
-    SELECT songs.id, songs.title, songs.link, albums.title as album, songs.singer_id
-    FROM songs
-    LEFT JOIN albums
-    ON songs.album_id = albums.id
-    WHERE songs.id = $1;
+  SELECT songs.id, songs.title, songs.link, albums.title as album, songs.singer_id
+  FROM songs
+  LEFT JOIN albums
+  ON songs.album_id = albums.id
+  WHERE songs.id = $1;
 `;
 const SQL_SEARCH_SINGER = `
-    SELECT name
-    FROM singers
-    WHERE id = $1;
+  SELECT *
+  FROM singers
+  WHERE name ILIKE $1;
+`;
+const SQL_SEARCH_ALBUM = `
+  SELECT title, release_year AS releaseYear, link
+  FROM albums
+  WHERE title ILIKE $1;
 `;
 
 const getSong = async function (musicId) {
@@ -26,6 +31,14 @@ const getSong = async function (musicId) {
   delete songData["singer_id"];
   songData = { ...songData, singer };
   return songData;
+};
+const getSinger = async function (singerName) {
+  const { rows } = await pool.query(SQL_SEARCH_SINGER, [singerName]);
+  return rows[0];
+};
+const getAlbum = async function (albumTitle) {
+  const { rows } = await pool.query(SQL_SEARCH_ALBUM, [albumTitle]);
+  return rows[0];
 };
 const getAllSongs = async function () {
   const { rows } = await pool.query("SELECT id FROM songs;");
@@ -59,8 +72,8 @@ const updateSong = async function (songInfo) {
     `,
     [
       songInfo.title,
-      songInfo.singer_id,
-      songInfo.album_id,
+      songInfo.singerId,
+      songInfo.albumId,
       songInfo.link,
       songInfo.id,
     ]
@@ -95,7 +108,9 @@ const updateAlbum = async function (albumInfo) {
 module.exports = {
   getSong,
   getAllSongs,
+  getSinger,
   getAllSingers,
+  getAlbum,
   getAllAlbums,
   updateSong,
   updateSinger,
