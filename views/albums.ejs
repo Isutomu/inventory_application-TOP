@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Albums</title>
+</head>
+<body>
+  <ul>
+    <% albums.forEach(album => { %>
+    <li style="margin-bottom: 10px;">
+      <ul>
+        <li><%= album.title %></li>
+        <li>Release year: <%= album.releaseYear %></li>
+        <li><a href="<%= album.link %>">Listen here!</a></li>
+      </ul>
+    </li>  
+    <% });%>
+  </ul>
+</body>
+</html>

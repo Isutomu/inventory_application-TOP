@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Songs</title>
+  </head>
+  <body>
+    <ul>
+      <% songs.forEach(song => { %>
+      <li style="margin-bottom: 10px;">
+        <ul>
+          <li><%= song.title %></li>
+          <li>Album: <%= song.album %></li>
+          <li><a href="<%= song.link %>">Listen here!</a></li>
+          <% const singers = song.singer.join(', '); %>
+          <li>Singer: <%= singers %></li>
+        </ul>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
