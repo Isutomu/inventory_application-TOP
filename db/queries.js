@@ -105,6 +105,24 @@ const updateAlbum = async function (albumInfo) {
     [albumInfo.title, albumInfo.releaseYear, albumInfo.link, albumInfo.id]
   );
 };
+const addSong = async function (songInfo) {
+  await pool.query(
+    `
+    INSERT INTO songs (title, singer_id, album_id, link)
+    VALUES ($1, $2, $3, $4);
+    `,
+    [songInfo.title, songInfo.singerId, songInfo.albumId, songInfo.link]
+  );
+};
+const deleteSong = async function (songId) {
+  await pool.query(
+    `
+    DELETE FROM songs
+    WHERE id = $1;
+    `,
+    [songId]
+  );
+};
 
 module.exports = {
   getSong,
@@ -116,4 +134,6 @@ module.exports = {
   updateSong,
   updateSinger,
   updateAlbum,
+  addSong,
+  deleteSong,
 };
