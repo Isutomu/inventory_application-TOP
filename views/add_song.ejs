@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update song</title>
+</head>
+<body>
+  <form method="POST" action="/new/songs">
+    <label for="title">Title: <input type="text" name="title" id="title" /></label>
+    <label for="singer">Singer:</label>
+    <select multiple name="singer" id="singer">
+      <% singers.forEach(singer => { %>
+      <option value="<%= singer.name %>"><%= singer.name %></option>
+      <% }); %>
+    </select>
+    <label for="album">Album:
+    <select name="album" id="album">
+      <% albums.forEach(album => { %>
+      <option value="<%= album.title %>"><%= album.title %></option>
+      <% }); %>
+    </select>
+    </label>
+    <label for="link">Link: <input type="url" name="link" id="link" /></label>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
