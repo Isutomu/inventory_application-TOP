@@ -8,14 +8,9 @@ const SQL_SEARCH_SONG = `
   WHERE songs.id = $1;
 `;
 const SQL_SEARCH_SINGER = `
-  SELECT *
+  SELECT name
   FROM singers
-  WHERE name ILIKE $1;
-`;
-const SQL_SEARCH_ALBUM = `
-  SELECT title, release_year AS releaseYear, link
-  FROM albums
-  WHERE title ILIKE $1;
+  WHERE id = $1;
 `;
 
 const getSong = async function (musicId) {
@@ -32,14 +27,6 @@ const getSong = async function (musicId) {
   songData = { ...songData, singer };
   return songData;
 };
-const getSinger = async function (singerName) {
-  const { rows } = await pool.query(SQL_SEARCH_SINGER, [singerName]);
-  return rows[0];
-};
-const getAlbum = async function (albumTitle) {
-  const { rows } = await pool.query(SQL_SEARCH_ALBUM, [albumTitle]);
-  return rows[0];
-};
 const getAllSongs = async function () {
   const { rows } = await pool.query("SELECT id FROM songs;");
 
@@ -52,9 +39,23 @@ const getAllSongs = async function () {
 
   return songs;
 };
+const getSingerByName = async function (name) {
+  const { rows } = await pool.query(
+    "SELECT * FROM singers WHERE singers.name ILIKE $1;",
+    [name]
+  );
+  return rows[0];
+};
 const getAllSingers = async function () {
   const { rows } = await pool.query("SELECT * FROM singers;");
   return rows;
+};
+const getAlbumByName = async function (title) {
+  const { rows } = await pool.query(
+    "SELECT * FROM albums WHERE albums.title ILIKE $1;",
+    [title]
+  );
+  return rows[0];
 };
 const getAllAlbums = async function () {
   const { rows } = await pool.query("SELECT * FROM albums;");
@@ -108,9 +109,9 @@ const updateAlbum = async function (albumInfo) {
 module.exports = {
   getSong,
   getAllSongs,
-  getSinger,
+  getSingerByName,
   getAllSingers,
-  getAlbum,
+  getAlbumByName,
   getAllAlbums,
   updateSong,
   updateSinger,
