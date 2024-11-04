@@ -15,6 +15,7 @@
           <li><a href="<%= song.link %>">Listen here!</a></li>
           <% const singers = song.singer.join(', '); %>
           <li>Singer: <%= singers %></li>
+          <li><form action="/delete/songs/<%= song.id %>" method="POST"><button type="submit" style="color: red;">X</button></form></li>
         </ul>
       </li>
       <% }); %>
